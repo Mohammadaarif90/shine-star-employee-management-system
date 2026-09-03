@@ -10,10 +10,10 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/attendance")
-@@CrossOrigin(origins = {
-    "http://localhost:5173",
-    "http://localhost:5174",
-    "https://shine-star-employee-management-syst.vercel.app"
+@CrossOrigin(origins = {
+        "http://localhost:5173",
+        "http://localhost:5174",
+        "https://shine-star-employee-management-syst.vercel.app"
 })
 public class AttendanceController {
 
@@ -37,8 +37,7 @@ public class AttendanceController {
         return attendanceService.markAttendance(
                 employeeId,
                 date,
-                status
-        );
+                status);
     }
 
     // =========================
@@ -66,8 +65,7 @@ public class AttendanceController {
         return attendanceService.getMonthlyAttendance(
                 employeeId,
                 start,
-                end
-        );
+                end);
     }
 
     // =========================
@@ -85,7 +83,6 @@ public class AttendanceController {
         return attendanceService.getAttendanceSummary(
                 employeeId,
                 start,
-                end
-        );
+                end);
     }
 }
