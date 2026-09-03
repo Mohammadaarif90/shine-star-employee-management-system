@@ -1,0 +1,428 @@
+* {
+  box-sizing: border-box;
+}
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+
+  padding: 40px 20px;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(47, 98, 230, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(47, 98, 230, 0.08),
+      transparent 30%
+    ),
+    #f5f8fc;
+}
+
+
+/* =========================================
+   BACKGROUND DECORATION
+========================================= */
+
+.login-decoration {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.decoration-one {
+  width: 320px;
+  height: 320px;
+
+  top: -160px;
+  left: -120px;
+
+  background: rgba(47, 98, 230, 0.06);
+}
+
+.decoration-two {
+  width: 380px;
+  height: 380px;
+
+  right: -180px;
+  bottom: -190px;
+
+  background: rgba(47, 98, 230, 0.06);
+}
+
+
+/* =========================================
+   LOGIN CARD
+========================================= */
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5eaf2;
+
+  border-radius: 22px;
+
+  padding: 42px 42px 30px;
+
+  position: relative;
+  z-index: 2;
+
+  box-shadow:
+    0 20px 50px rgba(15, 35, 70, 0.10),
+    0 4px 12px rgba(15, 35, 70, 0.04);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.login-logo {
+  width: 68px;
+  height: 68px;
+
+  margin: 0 auto 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 17px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5
+  );
+
+  color: #ffffff;
+
+  font-size: 24px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  box-shadow:
+    0 12px 25px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.login-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-heading h1 {
+  margin: 0;
+
+  color: #10213f;
+
+  font-size: 30px;
+  font-weight: 800;
+
+  letter-spacing: -0.7px;
+}
+
+.login-heading p {
+  margin: 8px 0 0;
+
+  color: #71819a;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-group {
+  margin-bottom: 21px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #334765;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.input-wrapper {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+
+  color: #7890ad;
+
+  font-size: 15px;
+
+  pointer-events: none;
+}
+
+.input-wrapper input {
+  width: 100%;
+  height: 50px;
+
+  border: 1px solid #dce4ef;
+
+  border-radius: 11px;
+
+  outline: none;
+
+  background: #fbfcfe;
+
+  padding: 0 44px 0 43px;
+
+  color: #172b4d;
+
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.input-wrapper input::placeholder {
+  color: #9aaac0;
+}
+
+.input-wrapper input:focus {
+  border-color: #3772ed;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 4px rgba(55, 114, 237, 0.10);
+}
+
+
+/* =========================================
+   PASSWORD TOGGLE
+========================================= */
+
+.password-toggle {
+  position: absolute;
+
+  right: 12px;
+
+  width: 32px;
+  height: 32px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #7186a1;
+
+  cursor: pointer;
+
+  border-radius: 7px;
+
+  font-size: 16px;
+}
+
+.password-toggle:hover {
+  background: #edf3ff;
+  color: #2563eb;
+}
+
+
+/* =========================================
+   LOGIN OPTIONS
+========================================= */
+
+.login-options {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 4px 0 24px;
+}
+
+.remember-option {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+.remember-option input {
+  width: 15px;
+  height: 15px;
+
+  accent-color: #2563eb;
+
+  cursor: pointer;
+}
+
+.forgot-password {
+  border: none;
+
+  background: transparent;
+
+  padding: 0;
+
+  color: #2563eb;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.login-button {
+  width: 100%;
+  height: 51px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #315fe8
+  );
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 20px rgba(37, 99, 235, 0.20);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.login-button:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 13px 25px rgba(37, 99, 235, 0.27);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+.login-button:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.7;
+
+  transform: none;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.login-footer {
+  margin-top: 27px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #edf0f5;
+
+  text-align: center;
+
+  color: #8997aa;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .login-page {
+    padding: 25px 16px;
+  }
+
+  .login-card {
+    max-width: 100%;
+
+    padding: 34px 25px 25px;
+
+    border-radius: 18px;
+  }
+
+  .login-logo {
+    width: 62px;
+    height: 62px;
+
+    font-size: 22px;
+  }
+
+  .login-heading h1 {
+    font-size: 26px;
+  }
+
+  .login-options {
+    gap: 10px;
+  }
+
+  .forgot-password {
+    font-size: 12px;
+  }
+}
