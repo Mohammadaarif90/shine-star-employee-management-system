@@ -11,7 +11,11 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5174")
+@CrossOrigin(origins = {
+        "http://localhost:5173",
+        "http://localhost:5174",
+        "https://shine-star-employee-management-syst.vercel.app"
+})
 @RequestMapping("/api/employees")
 public class EmployeeController {
 
@@ -51,8 +55,7 @@ public class EmployeeController {
     public ResponseEntity<Employee> getEmployeeById(
             @PathVariable Long id) {
 
-        Optional<Employee> employee =
-                employeeService.getEmployeeById(id);
+        Optional<Employee> employee = employeeService.getEmployeeById(id);
 
         return employee
                 .map(ResponseEntity::ok)
@@ -76,8 +79,7 @@ public class EmployeeController {
         employee.setSalary(request.getSalary());
         employee.setJoiningDate(request.getJoiningDate());
 
-        Optional<Employee> updatedEmployee =
-                employeeService.updateEmployee(id, employee);
+        Optional<Employee> updatedEmployee = employeeService.updateEmployee(id, employee);
 
         return updatedEmployee
                 .map(ResponseEntity::ok)

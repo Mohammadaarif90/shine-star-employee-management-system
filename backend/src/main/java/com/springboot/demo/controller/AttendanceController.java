@@ -10,7 +10,11 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/attendance")
-@CrossOrigin(origins = "http://localhost:5174")
+@@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "https://shine-star-employee-management-syst.vercel.app"
+})
 public class AttendanceController {
 
     private final AttendanceService attendanceService;
