@@ -45,10 +45,7 @@ function AddEmployee() {
     }
 
     try {
-      const response = await axios.post(
-        "http://localhost:8080/api/employees",
-        employee,
-      );
+      const response = await axios.post("/api/employees", employee);
 
       console.log("Employee added:", response.data);
 

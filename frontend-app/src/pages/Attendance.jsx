@@ -26,7 +26,7 @@ function Attendance() {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/employees");
+        const response = await axios.get("/api/employees");
 
         console.log("Employees fetched:", response.data);
 
@@ -71,7 +71,7 @@ function Attendance() {
       const { startDate, endDate } = getCurrentMonthDates();
 
       const response = await axios.get(
-        `http://localhost:8080/api/attendance/employee/${employeeId}/summary`,
+        `/api/attendance/employee/${employeeId}/summary`,
         {
           params: {
             startDate,
@@ -127,7 +127,7 @@ function Attendance() {
     try {
       setLoading(true);
 
-      await axios.post("http://localhost:8080/api/attendance", null, {
+      await axios.post("/api/attendance", null, {
         params: {
           employeeId: selectedEmployee,
           attendanceDate: attendanceDate,

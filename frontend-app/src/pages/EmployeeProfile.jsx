@@ -13,9 +13,7 @@ function EmployeeProfile() {
   useEffect(() => {
     const fetchEmployee = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:8080/api/employees/${id}`,
-        );
+        const response = await axios.get(`/api/employees/${id}`);
 
         setEmployee(response.data);
       } catch (error) {

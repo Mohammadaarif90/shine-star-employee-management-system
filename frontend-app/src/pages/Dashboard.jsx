@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Dashboard.css";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 function Dashboard() {
   const navigate = useNavigate();
 
@@ -16,7 +18,7 @@ function Dashboard() {
     try {
       setLoading(true);
 
-      const response = await axios.get("http://localhost:8080/api/employees");
+      const response = await axios.get(`${API_URL}/api/employees`);
 
       setEmployees(response.data || []);
     } catch (error) {

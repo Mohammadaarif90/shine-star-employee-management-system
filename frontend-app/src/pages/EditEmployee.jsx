@@ -13,9 +13,7 @@ function EditEmployee() {
   useEffect(() => {
     const fetchEmployee = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:8080/api/employees/${id}`,
-        );
+        const response = await axios.get(`/api/employees/${id}`);
 
         setEmployee(response.data);
       } catch (error) {
@@ -42,19 +40,16 @@ function EditEmployee() {
     e.preventDefault();
 
     try {
-      const response = await axios.put(
-        `http://localhost:8080/api/employees/${id}`,
-        {
-          firstName: employee.firstName,
-          lastName: employee.lastName,
-          email: employee.email,
-          phone: employee.phone,
-          department: employee.department,
-          position: employee.position,
-          salary: employee.salary,
-          joiningDate: employee.joiningDate,
-        },
-      );
+      const response = await axios.put(`/api/employees/${id}`, {
+        firstName: employee.firstName,
+        lastName: employee.lastName,
+        email: employee.email,
+        phone: employee.phone,
+        department: employee.department,
+        position: employee.position,
+        salary: employee.salary,
+        joiningDate: employee.joiningDate,
+      });
 
       console.log("Employee updated:", response.data);
 

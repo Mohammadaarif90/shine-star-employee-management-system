@@ -26,7 +26,7 @@ function EmployeeList() {
         setLoading(true);
       }
 
-      const response = await axios.get("http://localhost:8080/api/employees");
+      const response = await axios.get("/api/employees");
 
       setEmployees(response.data);
     } catch (error) {
@@ -89,7 +89,7 @@ function EmployeeList() {
     try {
       setDeletingId(id);
 
-      await axios.delete(`http://localhost:8080/api/employees/${id}`);
+      await axios.deleteaxios.delete(`/api/employees/${id}`);
 
       setEmployees((previousEmployees) =>
         previousEmployees.filter((employee) => employee.id !== id),
