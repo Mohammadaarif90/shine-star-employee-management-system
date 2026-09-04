@@ -4,9 +4,11 @@ WORKDIR /app
 
 COPY .mvn .mvn
 COPY mvnw pom.xml ./
-COPY src src
 
 RUN chmod +x mvnw
+
+COPY src src
+
 RUN ./mvnw clean package -DskipTests
 
-CMD ["sh", "-c", "java -jar target/demo-0.0.1-SNAPSHOT.jar"]
+CMD ["sh", "-c", "java -jar target/*.jar"]
