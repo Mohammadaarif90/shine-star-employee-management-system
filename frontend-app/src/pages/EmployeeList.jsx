@@ -89,7 +89,7 @@ function EmployeeList() {
     try {
       setDeletingId(id);
 
-      await axios.deleteaxios.delete(`/api/employees/${id}`);
+      await axios.delete(`/api/employees/${id}`);
 
       setEmployees((previousEmployees) =>
         previousEmployees.filter((employee) => employee.id !== id),
