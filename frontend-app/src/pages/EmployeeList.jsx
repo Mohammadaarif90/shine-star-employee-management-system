@@ -26,7 +26,9 @@ function EmployeeList() {
         setLoading(true);
       }
 
-      const response = await axios.get("/api/employees");
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_URL}/api/employees`,
+      );
 
       setEmployees(response.data);
     } catch (error) {
@@ -89,7 +91,7 @@ function EmployeeList() {
     try {
       setDeletingId(id);
 
-      await axios.delete(`/api/employees/${id}`);
+      await axios.delete(`${import.meta.env.VITE_API_URL}/api/employees/${id}`);
 
       setEmployees((previousEmployees) =>
         previousEmployees.filter((employee) => employee.id !== id),
