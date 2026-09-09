@@ -1,40 +1,41 @@
 # 🌟 Shine Star – Employee Management System
 
-A full-stack Employee Management System designed to simplify employee administration, attendance tracking, and workforce management through a clean and responsive web interface.
+A full-stack Employee Management System built to simplify employee administration, attendance tracking, and workforce management through a clean and responsive web interface.
 
-Built using **React.js, Spring Boot, REST API, and MySQL**, the application provides an admin dashboard where employees can be added, viewed, searched, updated, deleted, and monitored through attendance records.
+Built using **React.js, Spring Boot, REST API, and MySQL**, the application provides an admin dashboard for managing employee records, searching employees, tracking attendance, and viewing employee information.
 
 ---
 
 ## 🎯 Project Overview
 
-**Shine Star – Employee Management System** is a full-stack web application developed to manage employee information and attendance from a centralized dashboard.
+**Shine Star – Employee Management System** is a full-stack web application developed for centralized employee and attendance management.
 
-The system provides an easy-to-use interface for administrators to:
+The system allows an administrator to:
 
 - Manage employee records
+- Add new employees
+- View employee information
 - Search employees
-- View employee details
-- Update employee information
+- Update employee details
 - Delete employees
-- Track attendance
+- Track employee attendance
 - View attendance summaries
 - Monitor employee statistics
 - Access protected application routes
 
-The frontend communicates with the backend through REST APIs, while employee and attendance data are stored in a MySQL database.
+The frontend communicates with the Spring Boot backend through REST APIs, while MySQL is used to store application data.
 
 ---
 
 ## 💡 Why I Built This
 
-Employee information is often managed using spreadsheets or disconnected systems, which can make searching, updating, and tracking records difficult.
+Managing employee information manually can make it difficult to maintain records, search for employees, update information, and track attendance efficiently.
 
-I built **Shine Star** to create a centralized employee management solution where administrators can manage employee information and attendance through a single web application.
+I built **Shine Star** to provide a centralized web-based solution for employee management and attendance tracking.
 
-This project also helped me gain practical experience with:
+This project helped me gain practical experience with:
 
-- Full-stack application development
+- Full-stack web development
 - React.js
 - Spring Boot
 - REST API development
@@ -44,12 +45,14 @@ This project also helped me gain practical experience with:
 - React Router
 - Protected routes
 - Frontend and backend integration
+- Application deployment
 
 ---
 
 ## 🚀 Live Demo
 
-👉 https://shine-star-employee-management-syst.vercel.app
+**Live Application:**  
+https://shine-star-employee-management-syst.vercel.app
 
 ---
 
@@ -84,64 +87,64 @@ Administrators can:
 
 ### 🔍 Employee Search
 
-Employees can be searched from the employee list using search functionality.
+The employee list includes search functionality to quickly find employees.
 
 ### 📋 Employee Details
 
-The application provides a dedicated employee details/profile view containing important employee information.
+Each employee has a dedicated details/profile view containing important employee information.
 
 ### 📅 Attendance Management
 
 Administrators can:
 
 - Select an employee
+- Select an attendance date
 - Mark attendance
-- Select attendance date
 - Set attendance status
 - View attendance records
 
 ### 📈 Attendance Summary
 
-The system provides an attendance summary for employees over a selected date/month range.
+The system provides attendance summaries for employees based on a selected date range.
 
 ### ⚙️ Settings
 
-A dedicated settings section is available for application-related configuration.
+The application includes a dedicated settings section for application-related options.
 
 ### 🛡️ Protected Routes
 
-Application routes are protected so that users must pass through the login flow before accessing the main application pages.
+Important application pages are protected through a route-protection mechanism so users must complete the login flow before accessing the main application.
 
 ---
 
 # 🔄 How the System Works
 
-The application follows a simple full-stack architecture:
+The application follows a full-stack architecture where the React frontend communicates with the Spring Boot backend through REST APIs.
 
 ```text
-                ┌─────────────────────┐
-                │      Admin Login    │
-                └──────────┬──────────┘
-                           ↓
-                ┌─────────────────────┐
-                │      Dashboard      │
-                └──────────┬──────────┘
-                           ↓
-        ┌──────────────────┼──────────────────┐
-        ↓                  ↓                  ↓
-   Employees          Attendance          Settings
-        ↓                  ↓
- Add / Edit /        Mark Attendance
- Delete / Search     Attendance Summary
-        │                  │
-        └──────────┬───────┘
-                   ↓
-          ┌─────────────────┐
-          │   Spring Boot   │
-          │    REST API     │
-          └────────┬────────┘
-                   ↓
-          ┌─────────────────┐
-          │      MySQL      │
-          │    Database     │
-          └─────────────────┘
+                    ┌─────────────────────┐
+                    │      Admin Login    │
+                    └──────────┬──────────┘
+                               ↓
+                    ┌─────────────────────┐
+                    │      Dashboard      │
+                    └──────────┬──────────┘
+                               ↓
+          ┌────────────────────┼────────────────────┐
+          ↓                    ↓                    ↓
+     Employees            Attendance            Settings
+          ↓                    ↓
+   Add / Edit /          Mark Attendance
+   Delete / Search       Attendance Summary
+          │                    │
+          └──────────┬─────────┘
+                     ↓
+            ┌──────────────────┐
+            │   Spring Boot    │
+            │    REST API      │
+            └────────┬─────────┘
+                     ↓
+            ┌──────────────────┐
+            │      MySQL       │
+            │     Database     │
+            └──────────────────┘
